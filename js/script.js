@@ -8,20 +8,20 @@ class Countdown {
   get _actualDate() {
     return new Date();
   }
-  get _timeStampDiff() {
+  get _totalSeconds() {
     return this._futureDate.getTime() - this._actualDate.getTime();
   }
   get days() {
-    return Math.floor(this._timeStampDiff / (24 * 60 * 60 * 1000));
+    return Math.floor(this._totalSeconds / (24 * 60 * 60 * 1000));
   }
   get hours() {
-    return Math.floor(this._timeStampDiff / (60 * 60 * 1000));
+    return Math.floor(this._totalSeconds / (60 * 60 * 1000));
   }
   get minutes() {
-    return Math.floor(this._timeStampDiff / (60 * 1000));
+    return Math.floor(this._totalSeconds / (60 * 1000));
   }
   get seconds() {
-    return Math.floor(this._timeStampDiff / 1000);
+    return Math.floor(this._totalSeconds / 1000);
   }
   get total() {
     const days = this.days;
@@ -36,7 +36,7 @@ class Countdown {
     };
   }
 }
-const tempoParaONatal = new Countdown("25 December 2024 23:59:59 GMT-0300");
+const newYearTime = new Countdown("01 January 2025 00:00:00 GMT-0300");
 
 const days = document.querySelector("[data-days]");
 const hours = document.querySelector("[data-hours]");
@@ -44,10 +44,10 @@ const minutes = document.querySelector("[data-minutes]");
 const seconds = document.querySelector("[data-seconds]");
 
 setInterval(() => {
-  days.innerText = formatDate(tempoParaONatal.total.days);
-  hours.innerText = formatDate(tempoParaONatal.total.hours);
-  minutes.innerText = formatDate(tempoParaONatal.total.minutes);
-  seconds.innerText = formatDate(tempoParaONatal.total.seconds);
+  days.innerText = formatDate(newYearTime.total.days);
+  hours.innerText = formatDate(newYearTime.total.hours);
+  minutes.innerText = formatDate(newYearTime.total.minutes);
+  seconds.innerText = formatDate(newYearTime.total.seconds);
 }, 1000);
 function formatDate(time) {
   return time < 10 ? `0${time}` : `${time}`;
