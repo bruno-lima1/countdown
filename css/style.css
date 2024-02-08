@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 800px) 1fr;
+  padding: 0 0.75rem 0 0.75rem;
+}
+button {
+  font-family: "Rubik", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
+p,
+dd {
+  line-height: 1.5;
+}
+.countdown {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  text-align: center;
+  gap: 2rem;
+}
+.countdown span {
+  font-size: 5rem;
+}
+.countdown p {
+  font-size: 1.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .countdown {
+    gap: 1rem;
+    grid-column: 1;
+  }
+  .countdown span {
+    font-size: 1.75rem;
+  }
+  .countdown p {
+    font-size: 1rem;
+  }
+}
