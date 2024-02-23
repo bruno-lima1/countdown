@@ -42,15 +42,13 @@ if (days && hours && minutes && seconds) {
     }
   }
   const countdown = new Countdown("01 January 2025 00:00:00 GMT-0300");
-
-  function formatTime(time) {
+  function formatDate(time) {
     return time < 10 ? `0${time}` : `${time}`;
   }
-
   setInterval(() => {
-    days.innerText = formatTime(countdown._total.days);
-    hours.innerText = formatTime(countdown._total.hours);
-    minutes.innerText = formatTime(countdown._total.minutes);
-    seconds.innerText = formatTime(countdown._total.seconds);
+    days.innerText = formatDate(countdown._total.days);
+    hours.innerText = formatDate(countdown._total.hours);
+    minutes.innerText = formatDate(countdown._total.minutes);
+    seconds.innerText = formatDate(countdown._total.seconds);
   }, 1000);
 }
