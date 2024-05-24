@@ -61,16 +61,12 @@ dd {
 .countdown p {
   font-size: 1.5rem;
 }
-@media (max-width: 800px) {
-  body {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 540px) {
   .countdown {
     gap: 1rem;
-    grid-column: 1;
   }
   .countdown span {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
   .countdown p {
     font-size: 1rem;
