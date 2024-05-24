@@ -5,6 +5,8 @@ body {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 800px) 1fr;
   padding: 0 0.75rem 0 0.75rem;
+  background: #f0f4f9;
+  color: #1f1f1f
 }
 button {
   font-family: "Rubik", sans-serif;
@@ -58,18 +60,6 @@ dd {
 }
 .countdown p {
   font-size: 1.5rem;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: #fff;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background: #fff;
-    color: #000;
-  }
 }
 @media (max-width: 800px) {
   body {
