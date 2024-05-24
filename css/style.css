@@ -5,8 +5,8 @@ body {
   display: grid;
   grid-template-columns: 1fr minmax(300px, 800px) 1fr;
   padding: 0 0.75rem 0 0.75rem;
-  background: #f0f4f9;
-  color: #1f1f1f
+  background: #fff;
+  color: #1d1d1f;
 }
 button {
   font-family: "Rubik", sans-serif;
