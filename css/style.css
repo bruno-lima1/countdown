@@ -48,7 +48,7 @@ dd {
   line-height: 1.5;
 }
 .countdown {
-  padding-top: 5rem;
+  padding: 3.5rem 2rem 2rem 2rem;
   display: flex;
   justify-content: center;
   grid-column: 2;
@@ -61,14 +61,24 @@ dd {
 .countdown p {
   font-size: 1.5rem;
 }
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   .countdown {
     gap: 1rem;
   }
+}
+@media (max-width: 550px) {
   .countdown span {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .countdown p {
     font-size: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .countdown span {
+    font-size: 1.75rem;
+  }
+  .countdown p {
+    font-size: .75rem;
   }
 }
